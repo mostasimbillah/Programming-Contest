@@ -6,6 +6,7 @@ using namespace std;
 int main()
 {
 
+  freopen("in","r",stdin);
 	char str[101];
 	int i,counter=0,counter2=0;
 
