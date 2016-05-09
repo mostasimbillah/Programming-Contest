@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-#define MAX 1000000
+#define MAX 1000000 //Max define
 using namespace std;
 
 bool prime[MAX];
@@ -53,7 +53,7 @@ int main()
 
            for(i=0;i<=kk && p[i]<=sqrt(n);i++)
            {
-              if(n%p[i]==0&&p[i]!=n && p[i]<=n/2)
+              if(n%p[i]==0)
               {
                   cout << "Not prime!"<<endl;
                   flag=true;
