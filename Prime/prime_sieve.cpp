@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-#define MAX 1000000
+#define MAX 1000000 //Max define
 using namespace std;
 
 bool prime[MAX];
