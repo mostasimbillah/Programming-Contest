@@ -1,13 +1,15 @@
-#include <iostream>
+#include <bits/stdc++.h>
 #include<string.h>
+#include<stdio.h>
 
 using namespace std;
 
 int main()
 {
 
-  freopen("in","r",stdin);
-	char str[101];
+  
+	freopen("in","r",stdin);
+  char str[101];
 	int i,counter=0,counter2=0;
 
 	cin >> str;

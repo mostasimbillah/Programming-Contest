@@ -1,9 +1,9 @@
 #include<bits/stdc++.h>
-#define MAX 1000000 //Max define
+#define MAX 10000000 //Max define
 using namespace std;
 
 bool prime[MAX];
-int p[1000000];
+int p[700000];
 int kk=0;
 
 void prime_sieve()
@@ -27,7 +27,7 @@ void prime_sieve()
             kk++;
         }
     }
-
+    cout << kk << endl;
 }
 
 int main()
@@ -35,13 +35,13 @@ int main()
 
     prime_sieve();
 
-    int n,i;
+   long long int n,i;
 
 
     while(1)
     {
        cin >> n;
-       if(n<1000000)
+       if(n<10000000)
        {
             if(prime[n]==true) cout << n<< "= Not Prime"<<endl;
             else cout <<n<< "= Prime" <<endl;
