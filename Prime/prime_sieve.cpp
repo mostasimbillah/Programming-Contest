@@ -1,9 +1,10 @@
 #include<bits/stdc++.h>
-#define MAX 10000000 //Max define
+#define MAX 10001000 //Max define
+typedef long long int ll;
 using namespace std;
 
 bool prime[MAX];
-int p[700000];
+int p[1000000];
 int kk=0;
 
 void prime_sieve()
@@ -27,7 +28,6 @@ void prime_sieve()
             kk++;
         }
     }
-    cout << kk << endl;
 }
 
 int main()
@@ -35,38 +35,37 @@ int main()
 
     prime_sieve();
 
-   long long int n,i;
+   ll n,i;
+
+   while(1)
+   {
+      cin >> n;
+      if(n<10000000)
+      {
+           if(prime[n]==true) cout << n<< "= Not Prime"<<endl;
+           else cout <<n<< "= Prime" <<endl;
+      }
+      else
+      {
+           int sq=sqrt(n);
+           bool flag=false;
+
+          for(i=0;i<=kk && p[i]<=sqrt(n);i++)
+          {
+             if(n%p[i]==0)
+             {
+                 cout << "Not prime!"<<endl;
+                 flag=true;
+                 break;
+             }
+          }
+          if(flag==false)
+           cout<< "Prime!"<<endl;
+
+      }
 
 
-    while(1)
-    {
-       cin >> n;
-       if(n<10000000)
-       {
-            if(prime[n]==true) cout << n<< "= Not Prime"<<endl;
-            else cout <<n<< "= Prime" <<endl;
-       }
-       else
-       {
-            int sq=sqrt(n);
-            bool flag=false;
-
-           for(i=0;i<=kk && p[i]<=sqrt(n);i++)
-           {
-              if(n%p[i]==0)
-              {
-                  cout << "Not prime!"<<endl;
-                  flag=true;
-                  break;
-              }
-           }
-           if(flag==false)
-            cout<< "Prime!"<<endl;
-
-       }
-
-
-    }
+   }
 
 
 
