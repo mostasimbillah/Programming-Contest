@@ -9,9 +9,9 @@ void primeFactors(int n)
     // Print the number of 2s that divide n
     while (n%2 == 0)
     {
-       // printf("%d ", 2);
+        printf("%d ", 2);
         n = n/2;
-        large=2;
+       // large=2;
     }
 
     // n must be odd at this point.  So we can skip one element (Note i = i +2)
@@ -20,8 +20,8 @@ void primeFactors(int n)
         // While i divides n, print i and divide n
         while (n%i == 0)
         {
-           // printf("ghfgh");
-            large=i;
+            printf("%d ",n);
+            //large=i;
             n = n/i;
         }
     }
@@ -31,13 +31,13 @@ void primeFactors(int n)
     if (n > 2)
         large=n;
 
-    printf("%d",large);
+   // printf("%d",large);
 }
 
 /* Driver program to test above function */
 int main()
 {
-    int n = 31944;
+    int n = 55;
     primeFactors(n);
     return 0;
 }

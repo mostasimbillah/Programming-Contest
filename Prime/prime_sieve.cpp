@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-#define MAX 10001000 //Max define
+#define MAX 10001000 //Max define .. upto 19 digit
 typedef long long int ll;
 using namespace std;
 
@@ -40,7 +40,7 @@ int main()
    while(1)
    {
       cin >> n;
-      if(n<10000000)
+      if(n<MAX)
       {
            if(prime[n]==true) cout << n<< "= Not Prime"<<endl;
            else cout <<n<< "= Prime" <<endl;
