@@ -2,13 +2,13 @@
 
 using namespace std;
 
+
 int main()
 {
-    int c;
-    cin >> c;
 
-    cout <<c+1 <<endl;
+    int a=2147483647;
 
+    cout << a;
 
     return 0;
 }

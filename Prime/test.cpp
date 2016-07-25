@@ -1,29 +1,27 @@
 #include<bits/stdc++.h>
-
+#define PI 3.141592653589793
 using namespace std;
 
 int main()
 {
-
-    int arr[8]={1,3,5,7,9,11,13,15};
-
-    for(int i=0;i<8;i++)
+     int n,t;
+    double digit;
+    cin >>t;
+    while(t--)
     {
-        for(int j=0;j<8;j++)
-        {
-            for(int k=0;k<8;k++)
-            {
-
-                cout << arr[i] <<" "<<arr[j]<<" "<<arr[k]<<"+ :"<<arr[i]+arr[j]+arr[k]<<endl;
-              //  arr[i]+arr[j]+arr[k]
-                if(arr[i]+arr[j]+arr[k]==30)
-                {
-                    cout << arr[i] <<" "<<arr[j]<<" "<<arr[k]<<endl;
-                    break;
-                }
-            }
-        }
+        cin >>n;
+        digit=0;
+       for(int i=1;i<=n;i++)
+       {
+           digit+=log10(i);
+       }
+       digit=floor(digit);
+       digit=digit+1;
+       int ans=digit;
+       cout << ans << endl;
     }
+
+
 
     return 0;
 }

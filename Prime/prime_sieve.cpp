@@ -1,5 +1,6 @@
+//Prime Sieve
 #include<bits/stdc++.h>
-#define MAX 10001000 //Max define .. upto 19 digit
+#define MAX 10001000 //Max define .. up to 19 digit
 typedef long long int ll;
 using namespace std;
 
@@ -23,7 +24,6 @@ void prime_sieve()
     {
         if(prime[i]==false)
         {
-
             p[kk]=i;
             kk++;
         }
@@ -64,14 +64,7 @@ int main()
 
       }
 
-
    }
-
-
-
-
-
-
 
     return 0;
 }
