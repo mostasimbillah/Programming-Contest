@@ -6,9 +6,8 @@ int main()
 {
 
 	string str;
-	bool flag=true;
-	stack<char> stk;
-	int o=0,c=0,st=0;
+    vector<char> vct;
+	int c=0;
 	int n;
 	cin >> n;
 	while(n--)
@@ -16,35 +15,31 @@ int main()
 	    cin >> str;
         for(int i=0;i<str.length();i++)
         {
-
             if(str.at(i)=='<')
             {
-                o++;
-                st++;
-                stk.push(str.at(i));
-
+                vct.push_back(str.at(i));
             }
             else if(str.at(i)=='>')
             {
-                c++;
-                st++;
-                stk.push(str.at(i));
+                vct.push_back(str.at(i));
+            }
+        }
+        int l=0,r=0;
+        for(int i=0;i<vct.size();i++)
+        {
+            if(vct[i]=='<')
+            {
+                l++;
+            }else if(vct[i]=='>' && l>r)
+            {
+                r++;
 
             }
-
-        }
-        while(!stk.empty())
-        {
-
-
-            if(stk.pop()=='>')
         }
 
-
-            st=0;
-            c=0;
-            o=0;
-
+        cout << r << endl;
+        vct.clear();
+        l=0;r=0;
 	}
 
 	return 0;
