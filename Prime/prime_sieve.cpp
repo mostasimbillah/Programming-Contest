@@ -1,6 +1,6 @@
 //Prime Sieve
 #include<bits/stdc++.h>
-#define MAX 10001000 //Max define .. up to 19 digit
+#define MAX 10001000
 typedef long long int ll;
 using namespace std;
 

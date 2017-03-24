@@ -23,51 +23,32 @@ int main()
 {
     int n,i,s=0,o,oc4=0,oc3=0,oc1=0,oc2=0;
 
-    cin >> n;
-
-    for(i=1;i<=n;i++)
+    scanf("%d",&n);
+    int arr[n];
+    for(i=0;i<n;i++)
     {
-        cin >> o;
+        scanf("%d",&arr[i]);
 
-        if(o==4)
-            oc4++;
-        if(o==3)
-            oc3++;
-        if(o==2)
-            oc2++;
-        if(o==1)
+        if(arr[i]==1)
+        {
             oc1++;
+        }else if(arr[i]==2)
+        {
+            oc2++;
+        }else if(arr[i]==3)
+        {
+            oc3++;
+        }else if(arr[i]==4)
+        {
+            oc4++;
+        }
 
     }
-    int total=0;
 
-    total+=oc4;
+    sort(arr,arr+n);
+    for(auto l:arr)
+        cout << l << endl;
 
-    total+=oc3;
-    //cout << total << endl;
-    if(oc3<oc1)
-    {
-        oc1-=oc3;
-    }
-    if(oc2%2==0)
-    {
-        total+=oc2/2;
-        // cout << total << endl;
-    }else
-    {
-        total+=(oc2/2)+1;
-
-    }
-    if(oc1%4==0)
-    {
-        total+=oc1/4;
-    }else
-    {
-        total+=(oc1/4);
-
-    }
-    cout << total << endl;
-    cout << oc1 << endl;
 
     return 0;
 }
